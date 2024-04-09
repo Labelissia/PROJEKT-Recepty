@@ -5,6 +5,9 @@ html { box-sizing: border-box; }
 body {
 	margin: 0;
 	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	color: white;
 }
 
 .paticka {
@@ -19,17 +22,148 @@ body {
 
 /* -------------------------------------------------- */
 
+.main {
+	display: flex;
+	flex-direction: column;
+	gap: 1px;
+}
+.recipe {
+	
+	min-height: 90px;
+		padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-grow: 1;
+	background-size: cover;
+	background-position: center;
+}
+
+.big {
+	min-height: 200px;
+}
+
+.upperText {
+	display: flex;
+	justify-content: space-between;
+}
+
+p {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-family: "Raleway", sans-serif;
+	font-size: 18px;
+	font-weight: 800;
+	margin: 0;
+	padding: 0;
+}
+
+.big h1 {
+	font-size: 28px;
+}
+
+.first {
+	background-image: url(images/salat.jpg);
+	
+	order: 1;
+}
+.second {
+	background-image: url(images/chlebicek.jpg);
+	order: 2;
+}
+.third {
+	background-image: url(images/tacos.jpg);
+	order: 4;
+}
+.fourth {
+	background-image: url(images/cizrna.jpg);	
+	order: 3;
+}
+.fifth {
+	background-image: url(images/burger.jpg);	
+	order: 5;
+}
+
+footer {
+	display: none;
+}
+
+@media  only screen and (min-width: 480px) {
+	.main {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.big {
+		flex: 0 0 100%;
+		min-height: 250px;
+	}
+
+	.recipe {
+		padding: 20px;
+	}
+	
+	.small {
+		flex: 0 0 calc((100% - 1px) / 2);
+		min-height: 150px;
+	}
+
+	h1 {
+		font-size: 22px;
+	}
+
+	.big h1 {
+		font-size: 36px;
+	}
+
+	.third {
+		order: 3;
+	}
+	.fourth {	
+		order: 4;
+	}
+}
+
+@media  only screen and (min-width: 860px) {
+	.main {
+		flex-direction: column;
+		flex-wrap: wrap;
+		height: 100vh;
+	}
+
+	.big {
+		min-height: 400px;
+		flex: 1 0 100%;
+		width: calc((100% - 2px) / 2);
+	}
+
+	.recipe {
+		padding: 20px;
+		
+	}
+	
+	.small {
+		min-height: 200px;
+		width: calc((100% - 2px) / 4);
+	}
+
+	h1 {
+		font-size: 22px;
+	}
+
+	.big h1 {
+		font-size: 36px;
+	}
+	
+}
+
 /*
 Responzivní breakpointy:
 Mobil:		0 - 479px
 Tablet:		480px - 859px
-Počítač:	860px a víc
+Počítač:	860px a víc*/
 
-Chrome a některé další prohlížeče nejdou zmenšit pod určitou šířku, takže je možné, že ti nepůjde zmenšit tolik, aby se aktivovala mobilní verze. Pokud se ti to stane, změň si v kódu hranici mezi mobilem a tabletem třeba na 600px, nebo aktivuj v prohlížeči vývojářské nástroje s mobilním náhledem, kde může nastavovat jakoukoliv velikost (i malou).
-
-Obrázky pro jednotlivé recepty jsou ve složce images.
-Nastav je receptům jako obrázky na pozadí (tj. nepřidávej je jako <img> do HTML)
-
-Na rozložení prvků NEPOUŽÍVEJ absolutní pozicování, ale pouze flexboxy.
-Flexboxy mohou být vnořené do sebe, klidně několikrát.
-*/
