@@ -141,22 +141,17 @@ footer {
 		width: calc((100% - 2px) / 2);
 	}
 
-	.recipe {
-		padding: 20px;
-		
-	}
-	
 	.small {
 		min-height: 200px;
 		width: calc((100% - 2px) / 4);
 	}
 
 	h1 {
-		font-size: 22px;
+		font-size: 28px;
 	}
 
 	.big h1 {
-		font-size: 36px;
+		font-size: 48px;
 	}
 	
 }
